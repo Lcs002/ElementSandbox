@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Arquivos de Origem">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Arquivos de Recurso">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{f0e4a311-115f-4cbf-b142-55ed2f68827c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Id Manager">
+      <UniqueIdentifier>{7472638a-2d5e-4d7a-b047-3703ad9f5012}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sandbox">
+      <UniqueIdentifier>{144096c3-9250-4209-a575-496d588757a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sandbox\Elements">
+      <UniqueIdentifier>{70d61e76-f394-46bb-aea4-85aa0871f8c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sandbox\Textures">
+      <UniqueIdentifier>{ed361188-1dea-402e-b206-b0993653692f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sandbox\Elements\Manager">
+      <UniqueIdentifier>{38dd5c4b-cb51-4ba5-b9d5-6a063b6e830b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cc">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Sand.cc">
+      <Filter>Source\Sandbox\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Id-Manager.cc">
+      <Filter>Source\Id Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Sandbox.cc">
+      <Filter>Source\Sandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="Element.cc">
+      <Filter>Source\Sandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="Cell.cc">
+      <Filter>Source\Sandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cc">
+      <Filter>Source\Sandbox</Filter>
+    </ClCompile>
+    <ClCompile Include="Air.cc">
+      <Filter>Source\Sandbox\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Metal.cpp">
+      <Filter>Source\Sandbox\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Liquid.cpp">
+      <Filter>Source\Sandbox\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="None.cc">
+      <Filter>Source\Sandbox\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Smoke.cc">
+      <Filter>Source\Sandbox\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cc">
+      <Filter>Source\Sandbox\Textures</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Sand.hh">
+      <Filter>Source\Sandbox\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Id-Manager.hh">
+      <Filter>Source\Id Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sandbox.hh">
+      <Filter>Source\Sandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="Element.hh">
+      <Filter>Source\Sandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="Cell.hh">
+      <Filter>Source\Sandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.hh">
+      <Filter>Source\Sandbox</Filter>
+    </ClInclude>
+    <ClInclude Include="Air.hh">
+      <Filter>Source\Sandbox\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Metal.hh">
+      <Filter>Source\Sandbox\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Liquid.hh">
+      <Filter>Source\Sandbox\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="None.hh">
+      <Filter>Source\Sandbox\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Smoke.hh">
+      <Filter>Source\Sandbox\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.hh">
+      <Filter>Source\Sandbox\Textures</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
