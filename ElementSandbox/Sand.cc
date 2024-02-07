@@ -1,6 +1,4 @@
 #include "Sand.hh"
-#include "Air.hh"
-#include "Liquid.hh"
 #include "TextureManager.hh"
 
 Sand::Sand() : 
@@ -11,7 +9,7 @@ Sand::Sand() :
 
 unsigned char Sand::getId()
 {
-	return ID;
+	return Elements::SAND;
 }
 
 void Sand::handle(unsigned x, unsigned y, Board* board)
@@ -24,8 +22,8 @@ void Sand::handle(unsigned x, unsigned y, Board* board)
 
 	// Move Down Left
 	auto mDownLeftAir = [&]() -> bool {
-		if ((left.getId() == Air::ID || left.getId() == Liquid::ID) &&
-			(downLeft.getId() == Air::ID || downLeft.getId() == Liquid::ID))
+		if ((left.getId() == Elements::AIR || left.getId() == Elements::LIQUID) &&
+			(downLeft.getId() == Elements::AIR || downLeft.getId() == Elements::LIQUID))
 		{
 			board->set(x, y, &downLeft);
 			board->set(x - 1, y + 1, this);
@@ -35,8 +33,8 @@ void Sand::handle(unsigned x, unsigned y, Board* board)
 	};
 	// Move Down Right
 	auto mDownRightAir = [&]() -> bool {
-		if ((right.getId() == Air::ID || right.getId() == Liquid::ID) &&
-			(downRight.getId() == Air::ID || downRight.getId() == Liquid::ID))
+		if ((right.getId() == Elements::AIR || right.getId() == Elements::LIQUID) &&
+			(downRight.getId() == Elements::AIR || downRight.getId() == Elements::LIQUID))
 		{
 			board->set(x, y, &downRight);
 			board->set(x + 1, y + 1, this);
@@ -46,7 +44,7 @@ void Sand::handle(unsigned x, unsigned y, Board* board)
 	};
 
 	// Move Down
-	if (down.getId() == Air::ID || (down.getId() == Liquid::ID && !board->isUsed(x, y + 1))) {
+	if (down.getId() == Elements::AIR || (down.getId() == Elements::LIQUID && !board->isUsed(x, y + 1))) {
 		board->set(x, y, &down);
 		board->set(x, y + 1, this);
 	}

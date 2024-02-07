@@ -2,12 +2,11 @@
 #define METAL_H
 
 #include "Element.hh"
+#include "Elements.hh"
 
 class Metal : public Element
 {
 public:
-	static const unsigned char ID = 3;
-
 	Metal();
 
 	unsigned char getId() override;

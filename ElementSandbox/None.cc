@@ -9,7 +9,7 @@ None::None() :
 
 unsigned char None::getId()
 {
-	return ID;
+	return Elements::NONE;
 }
 
 void None::handle(unsigned x, unsigned y, Board* board)

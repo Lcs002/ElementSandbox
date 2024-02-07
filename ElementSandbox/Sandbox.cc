@@ -2,11 +2,9 @@
 #include <time.h>   
 #include <SFML/Graphics/Texture.hpp>
 #include "Sandbox.hh"
-#include "Air.hh"
-#include "Sand.hh"
-#include "Metal.hh"
-#include "Liquid.hh"
 #include "TextureManager.hh"
+#include "ElementHandler.hh"
+#include "Elements.hh"
 
 
 Sandbox::Sandbox()
@@ -83,10 +81,10 @@ void Sandbox::loop()
 			case sf::Event::KeyPressed:
 				switch (event.key.scancode)
 				{
-				case sf::Keyboard::Num0: element = Air::ID; break;
-				case sf::Keyboard::Num1: element = Sand::ID; break;
-				case sf::Keyboard::Num2: element = Metal::ID; break;
-				case sf::Keyboard::Num3: element = Liquid::ID; break;
+				case sf::Keyboard::Num0: element = Elements::AIR; break;
+				case sf::Keyboard::Num1: element = Elements::SAND; break;
+				case sf::Keyboard::Num2: element = Elements::METAL; break;
+				case sf::Keyboard::Num3: element = Elements::LIQUID; break;
 				default: break;
 				}
 			default: break;
@@ -94,14 +92,7 @@ void Sandbox::loop()
 		}
 
 		if (pressed) {
-			Element* e = NULL;
-			switch (element)
-			{
-			case Air::ID: e = new Air(); break;
-			case Sand::ID: e = new Sand(); break;
-			case Metal::ID: e = new Metal(); break;
-			case Liquid::ID: e = new Liquid(); break;
-			}
+			Element* e = ElementHandler::createElement(element);
 			this->board.set(mouseX / Board::U_SIZE, mouseY / Board::U_SIZE, e);
 		}
 

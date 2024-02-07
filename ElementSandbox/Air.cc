@@ -9,7 +9,7 @@ Air::Air() :
 
 unsigned char Air::getId()
 {
-	return ID;
+	return Elements::AIR;
 }
 
 void Air::handle(unsigned x, unsigned y, Board* board)

@@ -9,7 +9,7 @@ Metal::Metal() :
 
 unsigned char Metal::getId()
 {
-	return ID;
+	return Elements::METAL;
 }
 
 void Metal::handle(unsigned x, unsigned y, Board* board)

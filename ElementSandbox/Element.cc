@@ -13,11 +13,13 @@ Element::~Element()
 
 }
 
+// Texture
 sf::Texture& Element::getTexture()
 {
 	return this->texture;
 }
 
+// Pression
 unsigned char Element::getPression()
 {
 	return this->flag & (4 | 3 | 2 | 1);
@@ -26,4 +28,10 @@ unsigned char Element::getPression()
 void Element::setPression(unsigned char value)
 {
 	this->flag = (flag & ~(4 | 3 | 2 | 1)) | (value & (4 | 3 | 2 | 1));
+}
+
+// Interaction
+Interaction* Element::getInteraction(unsigned char id)
+{
+	interactionHandler.getInteraction(id);
 }

@@ -139,7 +139,10 @@
     <ClCompile Include="Board.cc" />
     <ClCompile Include="Cell.cc" />
     <ClCompile Include="Element.cc" />
+    <ClCompile Include="ElementHandler.cc" />
     <ClCompile Include="Id-Manager.cc" />
+    <ClCompile Include="Interaction.cc" />
+    <ClCompile Include="InteractionHandler.cc" />
     <ClCompile Include="Liquid.cpp" />
     <ClCompile Include="main.cc" />
     <ClCompile Include="None.cc" />
@@ -154,7 +157,11 @@
     <ClInclude Include="Board.hh" />
     <ClInclude Include="Cell.hh" />
     <ClInclude Include="Element.hh" />
+    <ClInclude Include="ElementHandler.hh" />
+    <ClInclude Include="Elements.hh" />
     <ClInclude Include="Id-Manager.hh" />
+    <ClInclude Include="Interaction.hh" />
+    <ClInclude Include="InteractionHandler.hh" />
     <ClInclude Include="Liquid.hh" />
     <ClInclude Include="None.hh" />
     <ClInclude Include="Sand.hh" />

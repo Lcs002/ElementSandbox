@@ -2,12 +2,11 @@
 #define AIR_H
 
 #include "Element.hh"
+#include "Elements.hh"
 
 class Air : public Element
 {
 public:
-	static const unsigned char ID = 1;
-
 	Air();
 
 	unsigned char getId() override;

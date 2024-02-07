@@ -8,7 +8,6 @@
 #include "Board.hh"
 
 class Element;
-class None;
 class Cell;
 class Board : public sf::Drawable
 {
@@ -31,7 +30,7 @@ public:
 
 private:
 	Cell* cells[WIDTH * HEIGHT];
-	None* none;
+	Element* none;
 
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };

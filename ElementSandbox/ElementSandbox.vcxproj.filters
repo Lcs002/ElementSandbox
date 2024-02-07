@@ -22,14 +22,26 @@
     <Filter Include="Source\Sandbox">
       <UniqueIdentifier>{144096c3-9250-4209-a575-496d588757a0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Sandbox\Elements">
-      <UniqueIdentifier>{70d61e76-f394-46bb-aea4-85aa0871f8c0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source\Sandbox\Textures">
       <UniqueIdentifier>{ed361188-1dea-402e-b206-b0993653692f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source\Sandbox\Elements\Manager">
-      <UniqueIdentifier>{38dd5c4b-cb51-4ba5-b9d5-6a063b6e830b}</UniqueIdentifier>
+    <Filter Include="Source\Sandbox\Element">
+      <UniqueIdentifier>{55806c98-ee7b-4d8d-af7c-f456f852039b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sandbox\Element\Elements">
+      <UniqueIdentifier>{70d61e76-f394-46bb-aea4-85aa0871f8c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sandbox\Interaction">
+      <UniqueIdentifier>{e4fd8fb8-8f06-4cf1-8de7-bdf53a11977d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sandbox\Interaction\Interactions">
+      <UniqueIdentifier>{e973a5df-4816-43db-a465-65df8661735d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sandbox\Interaction\Handler">
+      <UniqueIdentifier>{63da173c-a16b-4d40-a1c2-fc54e3596282}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Sandbox\Element\Elements\Handler">
+      <UniqueIdentifier>{c911c825-c4bb-4af9-8704-83ced7f92dd3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -37,15 +49,12 @@
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Sand.cc">
-      <Filter>Source\Sandbox\Elements</Filter>
+      <Filter>Source\Sandbox\Element\Elements</Filter>
     </ClCompile>
     <ClCompile Include="Id-Manager.cc">
       <Filter>Source\Id Manager</Filter>
     </ClCompile>
     <ClCompile Include="Sandbox.cc">
-      <Filter>Source\Sandbox</Filter>
-    </ClCompile>
-    <ClCompile Include="Element.cc">
       <Filter>Source\Sandbox</Filter>
     </ClCompile>
     <ClCompile Include="Cell.cc">
@@ -55,35 +64,44 @@
       <Filter>Source\Sandbox</Filter>
     </ClCompile>
     <ClCompile Include="Air.cc">
-      <Filter>Source\Sandbox\Elements</Filter>
+      <Filter>Source\Sandbox\Element\Elements</Filter>
     </ClCompile>
     <ClCompile Include="Metal.cpp">
-      <Filter>Source\Sandbox\Elements</Filter>
+      <Filter>Source\Sandbox\Element\Elements</Filter>
     </ClCompile>
     <ClCompile Include="Liquid.cpp">
-      <Filter>Source\Sandbox\Elements</Filter>
+      <Filter>Source\Sandbox\Element\Elements</Filter>
     </ClCompile>
     <ClCompile Include="None.cc">
-      <Filter>Source\Sandbox\Elements</Filter>
+      <Filter>Source\Sandbox\Element\Elements</Filter>
     </ClCompile>
     <ClCompile Include="Smoke.cc">
-      <Filter>Source\Sandbox\Elements</Filter>
+      <Filter>Source\Sandbox\Element\Elements</Filter>
     </ClCompile>
     <ClCompile Include="TextureManager.cc">
       <Filter>Source\Sandbox\Textures</Filter>
     </ClCompile>
+    <ClCompile Include="Element.cc">
+      <Filter>Source\Sandbox\Element</Filter>
+    </ClCompile>
+    <ClCompile Include="Interaction.cc">
+      <Filter>Source\Sandbox\Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="InteractionHandler.cc">
+      <Filter>Source\Sandbox\Interaction\Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="ElementHandler.cc">
+      <Filter>Source\Sandbox\Element\Elements\Handler</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sand.hh">
-      <Filter>Source\Sandbox\Elements</Filter>
+      <Filter>Source\Sandbox\Element\Elements</Filter>
     </ClInclude>
     <ClInclude Include="Id-Manager.hh">
       <Filter>Source\Id Manager</Filter>
     </ClInclude>
     <ClInclude Include="Sandbox.hh">
-      <Filter>Source\Sandbox</Filter>
-    </ClInclude>
-    <ClInclude Include="Element.hh">
       <Filter>Source\Sandbox</Filter>
     </ClInclude>
     <ClInclude Include="Cell.hh">
@@ -93,22 +111,37 @@
       <Filter>Source\Sandbox</Filter>
     </ClInclude>
     <ClInclude Include="Air.hh">
-      <Filter>Source\Sandbox\Elements</Filter>
+      <Filter>Source\Sandbox\Element\Elements</Filter>
     </ClInclude>
     <ClInclude Include="Metal.hh">
-      <Filter>Source\Sandbox\Elements</Filter>
+      <Filter>Source\Sandbox\Element\Elements</Filter>
     </ClInclude>
     <ClInclude Include="Liquid.hh">
-      <Filter>Source\Sandbox\Elements</Filter>
+      <Filter>Source\Sandbox\Element\Elements</Filter>
     </ClInclude>
     <ClInclude Include="None.hh">
-      <Filter>Source\Sandbox\Elements</Filter>
+      <Filter>Source\Sandbox\Element\Elements</Filter>
     </ClInclude>
     <ClInclude Include="Smoke.hh">
-      <Filter>Source\Sandbox\Elements</Filter>
+      <Filter>Source\Sandbox\Element\Elements</Filter>
     </ClInclude>
     <ClInclude Include="TextureManager.hh">
       <Filter>Source\Sandbox\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="Element.hh">
+      <Filter>Source\Sandbox\Element</Filter>
+    </ClInclude>
+    <ClInclude Include="Interaction.hh">
+      <Filter>Source\Sandbox\Interaction</Filter>
+    </ClInclude>
+    <ClInclude Include="InteractionHandler.hh">
+      <Filter>Source\Sandbox\Interaction\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="ElementHandler.hh">
+      <Filter>Source\Sandbox\Element\Elements\Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="Elements.hh">
+      <Filter>Source\Sandbox\Element</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,7 +1,6 @@
 #include "Board.hh"
-#include "Air.hh"
-#include "Sand.hh"
-#include "None.hh"
+#include "ElementHandler.hh"
+#include "Elements.hh"
 #include <algorithm>
 
 Board::Board()
@@ -21,10 +20,10 @@ Board::~Board()
 void Board::initialize()
 {
 	// Populate cells
-	this->none = new None();
+	this->none = ElementHandler::createElement(Elements::NONE);
 	for (int y = 0; y < HEIGHT; y++) {
 		for (int x = 0; x < WIDTH; x++) {
-			cells[y * WIDTH + x] = new Cell(x * U_SIZE, y * U_SIZE, 0, new Air());
+			cells[y * WIDTH + x] = new Cell(x * U_SIZE, y * U_SIZE, 0, ElementHandler::createElement(Elements::AIR));
 		}
 	}
 }

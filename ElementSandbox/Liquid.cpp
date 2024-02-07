@@ -1,6 +1,5 @@
 #include <random>
 #include "Liquid.hh"
-#include "Air.hh"
 #include "TextureManager.hh"
 
 Liquid::Liquid() : 
@@ -11,7 +10,7 @@ Liquid::Liquid() :
 
 unsigned char Liquid::getId()
 {
-	return ID;
+	return Elements::LIQUID;
 }
 
 void Liquid::handle(unsigned x, unsigned y, Board* board)
@@ -25,7 +24,7 @@ void Liquid::handle(unsigned x, unsigned y, Board* board)
 
 	auto mLeftAir = [&]() -> bool {
 		// Move Left
-		if (left.getId() == Air::ID) {
+		if (left.getId() == Elements::AIR) {
 			board->set(x, y, &left);
 			board->set(x - 1, y, this);
 			return true;
@@ -35,7 +34,7 @@ void Liquid::handle(unsigned x, unsigned y, Board* board)
 
 	auto mRightAir = [&]() -> bool {
 		// Move Right
-		if (right.getId() == Air::ID) {
+		if (right.getId() == Elements::AIR) {
 			board->set(x, y, &right);
 			board->set(x + 1, y, this);
 			return true;
@@ -45,7 +44,7 @@ void Liquid::handle(unsigned x, unsigned y, Board* board)
 
 	auto mDownLeftAir = [&]() -> bool {
 		// Move Down Left Air
-		if (left.getId() == Air::ID && downLeft.getId() == Air::ID) {
+		if (left.getId() == Elements::AIR && downLeft.getId() == Elements::AIR) {
 			board->set(x, y, &downLeft);
 			board->set(x - 1, y + 1, this);
 			return true;
@@ -54,7 +53,7 @@ void Liquid::handle(unsigned x, unsigned y, Board* board)
 	};
 	auto mDownRightAir = [&]() -> bool {
 		// Move Down Right Air
-		if (right.getId() == Air::ID && downRight.getId() == Air::ID) {
+		if (right.getId() == Elements::AIR && downRight.getId() == Elements::AIR) {
 			board->set(x, y, &downRight);
 			board->set(x + 1, y + 1, this);
 			return true;
@@ -63,7 +62,7 @@ void Liquid::handle(unsigned x, unsigned y, Board* board)
 	};
 	auto mDownLeftLiquid = [&]() -> bool {
 		// Move Down Left Liquid
-		if (left.getId() == Air::ID && downLeft.getId() == Liquid::ID) {
+		if (left.getId() == Elements::AIR && downLeft.getId() == Elements::LIQUID) {
 			board->set(x, y, &left);
 			board->set(x - 1, y, this);
 			return true;
@@ -73,7 +72,7 @@ void Liquid::handle(unsigned x, unsigned y, Board* board)
 
 	auto mDownRightLiquid = [&]() -> bool {
 		// Move Down Right Liquid
-		if (right.getId() == Air::ID && downRight.getId() == Liquid::ID) {
+		if (right.getId() == Elements::AIR && downRight.getId() == Elements::LIQUID) {
 			board->set(x, y, &right);
 			board->set(x + 1, y, this);
 			return true;
@@ -82,7 +81,7 @@ void Liquid::handle(unsigned x, unsigned y, Board* board)
 	};
 
 	// Move Down
-	if (down.getId() == Air::ID) {
+	if (down.getId() == Elements::AIR) {
 		board->set(x, y, &down);
 		board->set(x, y + 1, this);
 	}

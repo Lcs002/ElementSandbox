@@ -2,12 +2,11 @@
 #define LIQUID_H
 
 #include "Element.hh"
+#include "Elements.hh"
 
 class Liquid : public Element
 {
 public:
-	static const unsigned char ID = 4;
-
 	Liquid();
 
 	unsigned char getId() override;

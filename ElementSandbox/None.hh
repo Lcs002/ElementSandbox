@@ -2,13 +2,11 @@
 #define NONE_H
 
 #include "Element.hh"
+#include "Elements.hh"
 
-class Board;
 class None : public Element
 {
 public:
-	static const unsigned char ID = 0;
-
 	None();
 
 	unsigned char getId() override;

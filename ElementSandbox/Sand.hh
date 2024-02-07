@@ -2,11 +2,11 @@
 #define SAND_H
 
 #include "Element.hh"
+#include "Elements.hh"
 
 class Sand : public Element
 {
 public:
-	static const unsigned char ID = 2;
 
 	Sand();
 
